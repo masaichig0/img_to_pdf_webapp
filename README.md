@@ -159,18 +159,10 @@ ImgToPDF-Converter/
 - **run.py**: Entry point to run the Flask application.
 - **README.md**: Project documentation (this file).
 
-## Acknowledgments
+##Acknowledgments
 
-This project was developed in just **2 hours** with the assistance of [ChatGPT](https://chat.openai.com/), showcasing the potential of AI-powered tools in accelerating web application development.
+This project was created in just a few hours by a developer with limited programming experience. With the invaluable assistance of ChatGPT, it demonstrates how beginners can leverage AI-powered tools to build functional web applications quickly and efficiently.
 
-Special thanks to:
 
-- [OpenAI](https://openai.com/) for providing the ChatGPT platform.
-- The developers and contributors of [Flask](https://flask.palletsprojects.com/), [Bootstrap](https://getbootstrap.com/), and [Font Awesome](https://fontawesome.com/) for their invaluable tools and libraries.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
-
----
-```
