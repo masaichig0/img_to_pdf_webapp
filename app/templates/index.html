@@ -1,0 +1,37 @@
+<!-- app/templates/index.html -->
+{% extends "layout.html" %}
+
+{% block title %}Home - Image to PDF Converter{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-body text-center">
+                <h2 class="card-title mb-4"><i class="fas fa-file-image"></i> Convert Image to PDF</h2>
+                
+                <!-- Upload Area -->
+                <div class="upload-area p-5 mb-4" id="upload-area">
+                    <p class="mb-2"><i class="fas fa-cloud-upload-alt fa-2x text-primary"></i></p>
+                    <p class="mb-1">Drag & Drop your image here</p>
+                    <p class="mb-3">or</p>
+                    <button id="upload-button" class="btn btn-primary btn-lg"><i class="fas fa-folder-open"></i> Select Image</button>
+                    <input type="file" id="file-input" accept=".jpg,.jpeg,.png" style="display: none;">
+                </div>
+                
+                <!-- Progress Indicator -->
+                <div id="progress" class="progress mb-4" style="display: none;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" 
+                         style="width: 0%;">0%
+                    </div>
+                </div>
+                
+                <!-- Download Button -->
+                <button id="download-btn" class="btn btn-success btn-lg" style="display: none;">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

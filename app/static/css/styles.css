@@ -1,0 +1,209 @@
+/* app/static/css/styles.css */
+
+/* CSS Variables */
+:root {
+    --primary-color: #1e90ff; /* Blue */
+    --secondary-color: #ff7f50; /* Coral */
+    --background-gradient: linear-gradient(135deg, rgb(91, 202, 160), rgb(103, 206, 198)); /* Pink Gradient */
+    --upload-border-color: #ced4da; /* Light Gray */
+    --upload-hover-color: #1e90ff; /* Blue on Hover */
+    --alert-success-bg: #d4edda;
+    --alert-success-border: #c3e6cb;
+    --alert-danger-bg: #f8d7da;
+    --alert-danger-border: #f5c6cb;
+    --text-color: #333333;
+    --heading-color: #222222;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-gradient);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    width: 90%;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--heading-color);
+}
+
+/* Paragraphs */
+p {
+    font-size: 18px;
+    color: #555555;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-success {
+    background-color: var(--secondary-color);
+}
+
+/* Hover Effects */
+.btn:hover {
+    opacity: 0.95;
+    transform: scale(1.02);
+}
+
+/* Upload Area */
+.upload-area {
+    border: 2px dashed var(--upload-border-color);
+    border-radius: 15px;
+    padding: 50px;
+    background-color: #ffffff;
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-area.dragover {
+    background-color: #f0f8ff;
+    border-color: var(--upload-hover-color);
+    transform: translateY(-5px);
+}
+
+.upload-area p {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #666666;
+}
+
+.upload-area i {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Progress Bar */
+.progress {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    height: 25px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: width 0.4s;
+    color: white;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Alerts */
+.alert-success {
+    background-color: var(--alert-success-bg);
+    border-color: var(--alert-success-border);
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: var(--alert-danger-bg);
+    border-color: var(--alert-danger-border);
+    color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        max-width: 700px;
+        padding: 30px;
+    }
+
+    .upload-area {
+        padding: 40px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .upload-area p {
+        font-size: 18px;
+    }
+
+    .progress {
+        height: 20px;
+        margin-bottom: 20px;
+    }
+
+    .progress-bar {
+        line-height: 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .upload-area {
+        padding: 30px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .upload-area p {
+        font-size: 16px;
+    }
+
+    .progress {
+        height: 20px;
+    }
+
+    .progress-bar {
+        line-height: 20px;
+        font-size: 12px;
+    }
+}
